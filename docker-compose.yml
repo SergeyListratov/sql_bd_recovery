@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  web:
+    restart: unless-stopped
+    build: ./web
+    command: gunicorn --bind 0.0.0.0:5000 app:app
+    volumes:
+      - ./web/:/usr/src/app/
+
+    expose:
+      - 5000
+    env_file:
+      - ./.env.dev
+
+    networks:
+      net:
+        ipv4_address: 10.6.0.2
+
+
+  nginx:
+    restart: unless-stopped
+    build: ./nginx
+    ports:
+      - "1338:80"
+
+    networks:
+      net:
+        ipv4_address: 10.6.0.3
+
+    depends_on:
+      - web
+
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.6.0.0/16
+
+
+
+

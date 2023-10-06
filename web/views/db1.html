@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RPZ 1C_Developer_TestDB Recovery</title>
+
+</head>
+
+<body>
+<br>
+<div class="alert alert-success" role="alert">
+    <p>Список баз данных доступных для восстановления.</p>
+    <hr>
+</div>
+<br>
+</body>
+
+<body>
+<table>
+  {#  хедер #}
+  <thead>
+    <tr>
+      <th>{{'DATA_BASE_NAME'}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in db_list %}
+    <tr>
+         <td><a href="DataBase/{{ row  }}">{{ row  }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+</body>
+</html>

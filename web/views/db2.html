@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Восстановление баз данных для разработчиков на тестовых серверах</title>
+</head>
+
+
+<body>
+<br>
+<div class="alert alert-success" role="alert">
+    <p>База данных {{ one_db }} доступна для восстановленя.</p>
+    <hr>
+</div>
+<br>
+</body>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>{{'Date_Base_Info'}}</th>
+    </tr>
+  </thead>
+
+    <tr><td>{{ 'Дата последнего восстановления базы данных:  '}}{{ sql_info }}</td></tr>
+    <tr><td>{{ 'Дата создания архивива базы данных:  '}}{{ smb_info }}</td></tr>
+    <tr>
+    <td><a href="Запустить восстановление базы данных/{{ db_name }}">{{'Запустить восстановление базы данных : '}}{{ db_name }}</a></td>
+    </tr>
+
+
+</table>
+
+
+</body>
+</html>
