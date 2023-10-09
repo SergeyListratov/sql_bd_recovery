@@ -1,5 +1,12 @@
 FROM python:3.8.12-alpine
 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apk add -U tzdata
+ENV TZ=Europe/Moscow
+RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+
+
+
 RUN apk update
 RUN apk add gcc libc-dev g++ libffi-dev libxml2 unixodbc-dev unixodbc mariadb-dev libstdc++6
 RUN apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib curl gnupg

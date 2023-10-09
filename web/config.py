@@ -3,6 +3,8 @@
 # with open('/web/data/restor.ini', 'r', encoding='UTF-8') as file:
 # with open('/home/adminer/thinclient_drives/D:/OTS/Dev/Project/1C_DB_RESTORE/data/restor.ini', 'r', encoding='UTF-8') as file:
 # with open('/home/project/BD_RECOVERY/data/restor.ini', 'r', encoding='UTF-8') as file:
+# import datetime
+
 docker_path = '/usr/src/app/'
 with open(f'{docker_path}data/restor.ini', 'r', encoding='UTF-8') as file:
     conf_dict = dict()
@@ -67,6 +69,5 @@ arh_dict = {
 
 
 file_log_path = f"/{docker_path}log/"
-
 
 

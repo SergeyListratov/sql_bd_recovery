@@ -192,3 +192,5 @@ def db3(r):
         st = f'!!!FAIL!!!. User {session["login_name"]} NOT start recovery DB: {db} in {db_restore_time}'
         log_db_recovery(st)
         return render_template("error.html", error_message=str(error_message))
+
+
