@@ -61,13 +61,9 @@ def ldap_filter(connection, user_name):
 
 
 def get_nic_name_tuple(db_name):
-    nic_name = tuple()
     for i in config.arh_dict:
         if i in db_name:
-            nic_name = (i, db_name)
-            break
-
-    return nic_name
+            return i, db_name
 
 
 def get_mssql_conn(nic: str):
@@ -166,8 +162,6 @@ def index():
 
 @app.route('/DataBase/<db>', methods=['GET', 'POST'])
 def db2(db):
-    print(db)
-    print(session[db])
     error_message = f"*** Authentication Failed ***"
     if 'login_name' in session:
         return render_template('db2.html', sql_info=get_mssql_stat_info(get_mssql_conn(session[db]), db),
