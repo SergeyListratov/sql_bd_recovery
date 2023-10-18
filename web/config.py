@@ -59,6 +59,15 @@ arh_dict = {
     'DOC': {'smb_path': '', 'smb_server': 'rpz-srv-arhive', 'smb_name': 'Storage3', 'db_ip': '173.34.9.105',
             'arh_ip': '173.34.7.8', 'arh_name': 'doc_rpz_corp',
             'sql_inst': '173.34.9.105\\SQL1'},
+
+    'doc': {'smb_path': '', 'smb_server': 'rpz-srv-arhive', 'smb_name': 'Storage3', 'db_ip': '173.34.9.105',
+            'arh_ip': '173.34.7.8', 'arh_name': 'doc_rpz_corp',
+            'sql_inst': '173.34.9.105\\SQL1'},
+
+    'ZUP': {'smb_path': '', 'smb_server': 'rpz-srv-arhive', 'smb_name': 'Storage3', 'db_ip': '173.34.9.105',
+             'arh_ip': '173.34.7.8', 'arh_name': 'ZUP3',
+             'sql_inst': '173.34.9.105\\SQL1'},
+
     'AdventureWorks2014': {'smb_path': '', 'smb_server': 'rpz-srv-arhive', 'smb_name': 'Storage3',
                            'db_ip': 'rpz-srv-arhive', 'db_ip1': '173.34.9.105',
                            'arh_ip': '173.34.7.8', 'arh_name': 'AdventureWorks2014', 'sql_inst': '173.34.9.105\\SQL1'},
